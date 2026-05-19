@@ -17,8 +17,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    0] 4
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
       * {
         margin: 0;
@@ -78,11 +83,12 @@
 
       .logo {
         color: #fff;
-        font-size: 32px;
+        font-size: 20px;
         font-weight: 700;
         text-decoration: none;
         letter-spacing: 2px;
         position: relative;
+        font-family: "Cinzel", serif;
       }
 
       .logo span {
@@ -111,7 +117,7 @@
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 18px;
+        gap: 10px;
         list-style: none;
       }
 
@@ -122,9 +128,9 @@
       .nav-links a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px;
-        font-weight: 500;
-        padding: 12px 18px;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 12px 10px;
         border-radius: 30px;
         transition: 0.4s;
         position: relative;
@@ -134,22 +140,8 @@
         gap: 8px;
       }
 
-      .nav-links a i {
-        font-size: 14px;
-        transition: 0.4s;
-      }
-
       .nav-links a::before {
-        content: "";
-        position: absolute;
-        width: 0%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background: linear-gradient(90deg, #0b5cff, #1d8fff);
-        z-index: -1;
         transition: 0.5s;
-        border-radius: 30px;
       }
 
       .nav-links a:hover::before {
@@ -194,7 +186,6 @@
         cursor: pointer;
       }
 
-      
       /* MOBILE */
 
       @media (max-width: 950px) {
@@ -239,49 +230,56 @@
     <!-- NAVBAR -->
 
     <nav class="navbar">
-      <a href="#" class="logo"> NFS<span> GEMS</span> </a>
+      <a href="#" class="logo"> NFS GEMS <br /><span>& Jwellery </span> </a>
 
       <ul class="nav-links">
         <li>
           <a href="#">
-            <i class="fa-solid fa-house"></i>
+            <!-- <i class="fa-solid fa-house"></i> -->
             Home
           </a>
         </li>
 
         <li>
           <a href="#">
-            <i class="fa-solid fa-layer-group"></i>
-            Services
+            <!-- <i class="fa-solid fa-layer-group"></i> -->
+            About
           </a>
         </li>
 
         <li>
           <a href="#">
-            <i class="fa-solid fa-briefcase"></i>
-            Portfolio
+            <!-- <i class="fa-solid fa-briefcase"></i> -->
+            Welcome
           </a>
         </li>
 
         <li>
           <a href="#">
-            <i class="fa-solid fa-users"></i>
-            Team
+            <!-- <i class="fa-solid fa-users"></i> -->
+            Group of Companies
           </a>
         </li>
 
         <li>
           <a href="#">
-            <i class="fa-solid fa-star"></i>
-            Reviews
+            <!-- <i class="fa-solid fa-star"></i> -->
+            Gallary
           </a>
         </li>
 
         <li>
-          <a href="#">
-            <i class="fa-solid fa-envelope"></i>
-            Contact
-          </a>
+          <a href="#"> Services </a>
+        </li>
+
+        <li>
+          <a href="#"> Company Profile </a>
+        </li>
+        <li>
+          <a href="#">Partnership with </a>
+        </li>
+        <li>
+          <a href="#">Contact Us </a>
         </li>
 
         <button class="nav-btn">Get Started</button>
@@ -291,94 +289,40 @@
         <i class="fa-solid fa-bars"></i>
       </div>
     </nav>
+    
 
-  <!-- ================= PREMIUM HERO SECTION ================= -->
-
-<section class="hero">
-
-  <!-- OVERLAY -->
-  <div class="overlay"></div>
-
-  <!-- GOLD GRADIENT -->
-  <div class="gold-blur"></div>
-
-  <div class="hero-container">
-
-    <!-- LEFT CONTENT -->
     <div class="hero-content">
 
-      <span class="hero-subtitle">
-        NAK 2024 • Excellence • Experience • Trust
-      </span>
+  <span class="hero-tag">
+    Excellence • Experience • Trust
+  </span>
 
-      <h1>
-        NASIM <br>
-        AHMED KHAN
-      </h1>
+  <h1>
+    Discover The Art Of <br>
+    <span>Luxury Jewellery</span>
+  </h1>
 
-      <p>
-        Combining decades of expertise in rare gemstones,
-        luxury jewelry, and international trading with
-        a trusted global reputation.
-      </p>
+  <p>
+    Combining decades of expertise in rare gemstones,
+    premium jewellery, and international trading.
+    We deliver timeless elegance, unmatched craftsmanship,
+    and trusted luxury experiences across the globe.
+  </p>
 
-      <!-- BUTTONS -->
-      <div class="hero-buttons">
+  <div class="hero-buttons">
 
-        <a href="#" class="btn-primary">
-          Explore Collection
-        </a>
+    <a href="#" class="btn1">
+      Explore Collection
+    </a>
 
-        <a href="#" class="btn-secondary">
-          Contact Us
-        </a>
-
-      </div>
-
-      <!-- STATS -->
-      <div class="hero-stats">
-
-        <div class="stat-box">
-          <h3>20+</h3>
-          <span>Years Experience</span>
-        </div>
-
-        <div class="stat-box">
-          <h3>15+</h3>
-          <span>Countries</span>
-        </div>
-
-        <div class="stat-box">
-          <h3>9+</h3>
-          <span>Rare Gemstones</span>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- RIGHT IMAGE -->
-    <div class="hero-image">
-
-      <img src="images/nasim.png" alt="Nasim Ahmed Khan">
-
-      <!-- FLOATING CARD -->
-      <div class="floating-box">
-
-        <i class="fa-solid fa-gem"></i>
-
-        <div>
-          <h4>Rare Gem Expert</h4>
-          <p>Global Luxury Trading</p>
-        </div>
-
-      </div>
-
-    </div>
+    <a href="#" class="btn2">
+      Contact Us
+    </a>
 
   </div>
 
-</section>
+</div>
+
     <script>
       const menuBtn = document.querySelector(".menu-btn");
       const navLinks = document.querySelector(".nav-links");
@@ -396,5 +340,8 @@
         }
       });
     </script>
+
+
+
   </body>
 </html>
