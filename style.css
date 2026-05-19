@@ -13,37 +13,37 @@ body{
   background:#050816;
 }
 
+/* ================= HERO CONTENT ================= */
+
 .hero-content{
-  padding: 100px;
-  max-width:700px;
+  max-width:650px;
   z-index:2;
   animation:fadeUp 1.2s ease;
 }
 
-/* SMALL TAG */
+/* TAG */
 
 .hero-tag{
   display:inline-block;
   padding:12px 24px;
-  border:1px solid rgba(255,255,255,0.12);
   border-radius:50px;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
   color:#d4a44d;
   font-size:14px;
   letter-spacing:2px;
-  margin-bottom:28px;
-  text-transform:uppercase;
+  margin-bottom:25px;
+  backdrop-filter:blur(10px);
 }
 
 /* HEADING */
 
 .hero-content h1{
+  font-family:'Cinzel', serif;
   font-size:78px;
   line-height:1.1;
   color:#fff;
-  margin-bottom:28px;
-  font-family:'Cinzel',serif;
+  margin-bottom:25px;
   font-weight:700;
   text-transform:uppercase;
 }
@@ -55,10 +55,9 @@ body{
 /* PARAGRAPH */
 
 .hero-content p{
-  color:#d7dce5;
+  color:#d8dce6;
   font-size:17px;
   line-height:1.9;
-  max-width:620px;
   margin-bottom:40px;
 }
 
@@ -66,25 +65,26 @@ body{
 
 .hero-buttons{
   display:flex;
-  align-items:center;
   gap:20px;
   flex-wrap:wrap;
 }
+
+/* COMMON BUTTON */
 
 .hero-buttons a{
   padding:16px 34px;
   border-radius:50px;
   text-decoration:none;
   font-weight:600;
-  transition:0.4s;
+  transition:0.4s ease;
 }
 
 /* PRIMARY BUTTON */
 
 .btn1{
-  background:linear-gradient(135deg,#d4a44d,#f1d18d);
+  background:linear-gradient(135deg,#d4a44d,#f0cf8d);
   color:#08111f;
-  box-shadow:0 12px 30px rgba(212,164,77,0.35);
+  box-shadow:0 15px 35px rgba(212,164,77,0.35);
 }
 
 .btn1:hover{
@@ -94,9 +94,9 @@ body{
 /* SECONDARY BUTTON */
 
 .btn2{
-  border:1px solid rgba(255,255,255,0.15);
-  color:#fff;
+  border:1px solid rgba(255,255,255,0.12);
   background:rgba(255,255,255,0.05);
+  color:#fff;
   backdrop-filter:blur(10px);
 }
 
@@ -122,7 +122,7 @@ body{
 
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:768px){
 
@@ -146,8 +146,9 @@ body{
     font-size:40px;
   }
 
-  .hero-content p{
-    font-size:15px;
+  .hero-buttons a{
+    width:100%;
+    text-align:center;
   }
 
 }
