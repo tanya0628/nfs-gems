@@ -311,6 +311,7 @@
 
 .hero-content h1 span{
   color:#d4a44d;
+  font-size: 50px;
 }
 
 /* PARAGRAPH */
@@ -398,6 +399,9 @@
 
 @media(max-width:900px){
 
+  .hero-section{
+    height: 80vh;
+  }
   .hero-content h1{
     font-size:58px;
   }
@@ -498,10 +502,11 @@
   border-radius:50px;
   background:rgba(255,255,255,0.05);
   border:1px solid rgba(255,255,255,0.08);
-  color:#4da3ff;
-  font-size:11px;
+  color:#d4a44d;
+  font-size:35px;
   letter-spacing:2px;
   margin-bottom:20px;
+  font-family:'Cinzel',serif;
 }
 
 .welcome-content h2{
@@ -512,6 +517,7 @@
   margin-bottom:18px;
   text-transform:uppercase;
 }
+
 
 .welcome-content p{
   color:#bfc8d8;
