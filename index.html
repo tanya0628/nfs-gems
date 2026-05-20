@@ -21,209 +21,11 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    0] 4
+    
 
     <link rel="stylesheet" href="style.css" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-
-      body {
-        min-height: 100vh;
-        background: #061224;
-        overflow-x: hidden;
-      }
-
-      /* ================= NAVBAR ================= */
-
-      .navbar {
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        padding: 18px 7%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: rgba(5, 14, 28, 0.75);
-        backdrop-filter: blur(15px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        transition: 0.4s;
-      }
-
-      .navbar::before {
-        content: "";
-        position: absolute;
-        width: 250px;
-        height: 250px;
-        background: #0b5cff;
-        filter: blur(120px);
-        top: -180px;
-        left: -100px;
-        opacity: 0.5;
-        z-index: -1;
-        animation: moveGlow 5s infinite alternate;
-      }
-
-      @keyframes moveGlow {
-        0% {
-          transform: translateX(0px);
-        }
-        100% {
-          transform: translateX(80px);
-        }
-      }
-
-      /* LOGO */
-
-      .logo {
-        color: #fff;
-        font-size: 20px;
-        font-weight: 700;
-        text-decoration: none;
-        letter-spacing: 2px;
-        position: relative;
-        font-family: "Cinzel", serif;
-      }
-
-      .logo span {
-        color: #0b5cff;
-      }
-
-      .logo::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: #0b5cff;
-        left: 0;
-        bottom: -6px;
-        transform: scaleX(0);
-        transition: 0.4s;
-        transform-origin: left;
-      }
-
-      .logo:hover::after {
-        transform: scaleX(1);
-      }
-
-      /* NAV LINKS */
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        list-style: none;
-      }
-
-      .nav-links li {
-        position: relative;
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 13px;
-        font-weight: 600;
-        padding: 12px 10px;
-        border-radius: 30px;
-        transition: 0.4s;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .nav-links a::before {
-        transition: 0.5s;
-      }
-
-      .nav-links a:hover::before {
-        width: 100%;
-      }
-
-      .nav-links a:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(11, 92, 255, 0.35);
-      }
-
-      .nav-links a:hover i {
-        transform: rotate(360deg);
-      }
-
-      /* BUTTON */
-
-      .nav-btn {
-        padding: 12px 24px;
-        background: linear-gradient(135deg, #0b5cff, #1d8fff);
-        color: #fff;
-        border: none;
-        border-radius: 40px;
-        font-size: 15px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: 0.4s;
-        box-shadow: 0 10px 25px rgba(11, 92, 255, 0.35);
-      }
-
-      .nav-btn:hover {
-        transform: translateY(-4px) scale(1.03);
-        box-shadow: 0 15px 35px rgba(11, 92, 255, 0.5);
-      }
-
-      /* HAMBURGER */
-
-      .menu-btn {
-        display: none;
-        font-size: 26px;
-        color: #fff;
-        cursor: pointer;
-      }
-
-      /* MOBILE */
-
-      @media (max-width: 950px) {
-        .menu-btn {
-          display: block;
-        }
-
-        .nav-links {
-          position: absolute;
-          top: 100%;
-          right: -100%;
-          width: 300px;
-          height: 100vh;
-          background: #08192f;
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 40px 25px;
-          transition: 0.5s ease;
-          border-left: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .nav-links.active {
-          right: 0;
-        }
-
-        .nav-links a {
-          width: 100%;
-        }
-
-        .nav-btn {
-          margin-top: 20px;
-          width: 100%;
-        }
-
-        .hero h1 {
-          font-size: 45px;
-        }
-      }
+      
     </style>
   </head>
   <body>
@@ -291,37 +93,6 @@
     </nav>
     
 
-    <div class="hero-content">
-
-  <span class="hero-tag">
-    Excellence • Experience • Trust
-  </span>
-
-  <h1>
-    Discover The Art Of <br>
-    <span>Luxury Jewellery</span>
-  </h1>
-
-  <p>
-    Combining decades of expertise in rare gemstones,
-    premium jewellery, and international trading.
-    We deliver timeless elegance, unmatched craftsmanship,
-    and trusted luxury experiences across the globe.
-  </p>
-
-  <div class="hero-buttons">
-
-    <a href="#" class="btn1">
-      Explore Collection
-    </a>
-
-    <a href="#" class="btn2">
-      Contact Us
-    </a>
-
-  </div>
-
-</div>
 
     <script>
       const menuBtn = document.querySelector(".menu-btn");
@@ -342,6 +113,218 @@
     </script>
 
 
+<!-- ================= HERO SECTION ================= -->
 
+<section class="hero-section">
+
+  <!-- VIDEO -->
+  <video autoplay muted loop playsinline>
+    <source src="bgvid.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-container">
+
+    <div class="hero-content">
+
+      <span class="hero-tag">
+        Excellence • Experience • Trust
+      </span>
+
+      <h1>
+        Discover Timeless <br>
+        <span>Luxury Jewellery</span>
+      </h1>
+
+      <p>
+        Experience the brilliance of rare gemstones,
+        handcrafted jewellery, and premium luxury
+        designed for timeless elegance.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#" class="hero-btn1">
+          Explore Collection
+        </a>
+
+        <a href="#" class="hero-btn2">
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ================= WELCOME SECTION ================= -->
+
+<section class="welcome-section">
+
+  <!-- BLUR EFFECT -->
+  <div class="welcome-blur"></div>
+
+  <div class="welcome-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="welcome-image">
+
+      <div class="welcome-img-box">
+
+        <img src="welcome.jpeg" alt="Luxury Jewellery">
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="welcome-content">
+
+      <span class="welcome-tag">
+        WELCOME TO NFS JEWELS
+      </span>
+
+      <h2>
+        Crafting Luxury <br>
+        Beyond Generations
+      </h2>
+
+      <p>
+        At NFS Jewels, every gemstone tells a story of elegance,
+        authenticity, and timeless craftsmanship. With decades of
+        expertise in rare gems and luxury jewellery, we bring
+        exceptional brilliance to every collection.
+      </p>
+
+      <p>
+        From premium diamonds and sapphires to handcrafted luxury
+        jewellery, our creations are designed for those who value
+        sophistication, trust, and unmatched quality.
+      </p>
+
+      <!-- FEATURES -->
+
+      <div class="welcome-features">
+
+        <div class="welcome-feature">
+
+          <i class="fa-solid fa-gem"></i>
+
+          <div>
+            <h4>Premium Gemstones</h4>
+            <span>Rare & certified luxury stones</span>
+          </div>
+
+        </div>
+
+        <div class="welcome-feature">
+
+          <i class="fa-solid fa-crown"></i>
+
+          <div>
+            <h4>Luxury Craftsmanship</h4>
+            <span>Elegant handcrafted jewellery</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- BUTTON -->
+
+      <a href="#" class="welcome-btn">
+        Discover More
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section class="premium-about">
+
+  <!-- BACKGROUND BLUR -->
+  <div class="about-blur"></div>
+
+  <div class="premium-about-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="premium-about-content">
+
+      <span class="premium-tag">
+        ABOUT NFS JEWELS
+      </span>
+
+      <h2>
+        A Legacy Built On <br>
+        Rare Gems & Trust
+      </h2>
+
+      <p>
+        Combining over two decades of experience in rare gemstones
+        and luxury jewellery trading, NFS Jewels represents elegance,
+        authenticity, and international excellence.
+      </p>
+
+      <p>
+        Led by Nasim Ahmed Khan, the brand has successfully
+        expanded across multiple continents with expertise in
+        Diamond, Ruby, Blue Sapphire, Emerald, Pearl,
+        Coral, and other precious gemstones.
+      </p>
+
+      <!-- SMALL FEATURES -->
+
+      <div class="premium-features">
+
+        <div class="premium-feature-box">
+          <i class="fa-solid fa-gem"></i>
+          <span>Rare Gem Expertise</span>
+        </div>
+
+        <div class="premium-feature-box">
+          <i class="fa-solid fa-earth-americas"></i>
+          <span>Global Exhibitions</span>
+        </div>
+
+        <div class="premium-feature-box">
+          <i class="fa-solid fa-award"></i>
+          <span>20+ Years Experience</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="premium-about-image">
+
+      <div class="image-wrapper">
+
+        <img src="about.jpeg" alt="Nasim Ahmed Khan">
+
+      </div>
+
+      <!-- FLOATING CARD -->
+
+      <div class="about-floating-card">
+
+        <h3>
+          “Luxury is not just worn,
+          it is experienced.”
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
   </body>
 </html>
