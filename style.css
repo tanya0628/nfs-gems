@@ -749,7 +749,7 @@
 .premium-tag{
   display:inline-block;
   color:#4da3ff;
-  font-size:12px;
+  font-size:40px;
   letter-spacing:2px;
   margin-bottom:18px;
   font-weight:600;
@@ -920,6 +920,172 @@
 
   .about-floating-card h3{
     font-size:14px;
+  }
+
+}
+/* ================= GROUP SECTION ================= */
+
+.group-section{
+  width:100%;
+  padding:90px 7%;
+  background:#050d1a;
+  position:relative;
+  overflow:hidden;
+}
+
+/* BLUR */
+
+.group-blur{
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:#0b5cff;
+  border-radius:50%;
+  filter:blur(170px);
+  opacity:0.12;
+  top:-120px;
+  left:-120px;
+}
+
+/* HEADER */
+
+.group-header{
+  text-align:center;
+  max-width:750px;
+  margin:auto;
+  margin-bottom:50px;
+  position:relative;
+  z-index:2;
+}
+
+.group-header span{
+  color:#4da3ff;
+  font-size:40px;
+  letter-spacing:2px;
+  font-weight:600;
+}
+
+.group-header h2{
+  font-family:'Cinzel',serif;
+  font-size:44px;
+  line-height:1.3;
+  color:#fff;
+  margin:18px 0;
+}
+
+.group-header p{
+  color:#b8c2d3;
+  font-size:14px;
+  line-height:1.9;
+}
+
+/* ================= CONTAINER ================= */
+
+.group-container{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  position:relative;
+  z-index:2;
+}
+
+/* CARD */
+
+.group-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:26px;
+  padding:35px 28px;
+  transition:0.4s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.group-card:hover{
+  transform:translateY(-8px);
+  background:rgba(11,92,255,0.08);
+}
+
+/* ICON */
+
+.group-icon{
+  width:70px;
+  height:70px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#0b5cff,#4da3ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:24px;
+}
+
+.group-icon i{
+  color:#fff;
+  font-size:26px;
+}
+
+/* TITLE */
+
+.group-card h3{
+  color:#fff;
+  font-size:24px;
+  margin-bottom:14px;
+  font-weight:600;
+}
+
+/* TEXT */
+
+.group-card p{
+  color:#b8c2d3;
+  font-size:14px;
+  line-height:1.9;
+  margin-bottom:24px;
+}
+
+/* BUTTON */
+
+.group-card a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#4da3ff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+  transition:0.4s;
+}
+
+.group-card a:hover{
+  gap:16px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:1000px){
+
+  .group-container{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .group-section{
+    padding:70px 5%;
+  }
+
+  .group-header h2{
+    font-size:32px;
+  }
+
+  .group-container{
+    grid-template-columns:1fr;
+  }
+
+  .group-card{
+    padding:30px 24px;
   }
 
 }
