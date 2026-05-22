@@ -22,3 +22,52 @@ whatsappBtn.addEventListener("click", function(e){
   window.open(whatsappURL, "_blank");
 
 });
+/* ================= MOBILE DROPDOWN ================= */
+
+const dropdown = document.querySelector(".dropdown");
+
+dropdown.addEventListener("click", () => {
+  dropdown.classList.toggle("active");
+});
+/* ================= SIMPLE VIDEO SLIDER ================= */
+
+const slides = document.querySelectorAll(".video-slide");
+
+const next = document.querySelector(".nextBtn");
+
+const prev = document.querySelector(".prevBtn");
+
+let index = 0;
+
+/* NEXT BUTTON */
+
+next.onclick = () => {
+
+  slides[index].classList.remove("active");
+
+  index++;
+
+  if(index >= slides.length){
+    index = 0;
+  }
+
+  slides[index].classList.add("active");
+
+};
+
+/* PREVIOUS BUTTON */
+
+prev.onclick = () => {
+
+  slides[index].classList.remove("active");
+
+  index--;
+
+  if(index < 0){
+    index = slides.length - 1;
+  }
+
+  slides[index].classList.add("active");
+
+};
+
