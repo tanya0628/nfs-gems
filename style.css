@@ -63,8 +63,77 @@
       }
 
       /* LOGO */
+/* LOGO BOX */
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
 
+/* IMAGE LOGO */
+.logo1{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    display:block;
+}
+
+/* TEXT LOGO */
+.logo{
+    text-decoration:none;
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+    line-height:1.1;
+    letter-spacing:1px;
+}
+
+.logo span{
+    font-size:14px;
+    font-weight:400;
+    color:#d6d6d6;
+    letter-spacing:2px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .logo-box{
+        gap:8px;
+    }
+
+    .logo1{
+        width:50px;
+        height:50px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .logo span{
+        font-size:11px;
+        letter-spacing:1px;
+    }
+}
+
+@media(max-width:480px){
+
+    .logo1{
+        width:42px;
+        height:42px;
+    }
+
+    .logo{
+        font-size:15px;
+    }
+
+    .logo span{
+        font-size:10px;
+    }
+}
       .logo {
+        right: 60px;
         color: #fff;
         font-size: 20px;
         font-weight: 700;
@@ -100,7 +169,7 @@
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
         list-style: none;
       }
 
@@ -301,7 +370,7 @@
 
 .hero-content h1{
   font-family:'Cinzel',serif;
-  font-size:82px;
+  font-size:60px;
   line-height:1.1;
   color:#fff;
   margin-bottom:24px;
@@ -2717,3 +2786,13 @@
   }
 
 }
+
+
+.logo1{
+  width: 65px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+
