@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NFS GEMSr</title>
+    <title>Premium Animated Navbar</title>
 
     <!-- FONT AWESOME -->
     <link
@@ -60,36 +60,133 @@
 
 <li class="dropdown">
 
-  <details>
+ <a href="javascript:void(0)" id="companyDropdown">
+  Group Of Companies
+  <i class="fa-solid fa-chevron-down"></i>
+</a>
 
-    <summary style="cursor:pointer;list-style:none;color:white;padding:10px 0;">
-      Group Of Companies
-      <i class="fa-solid fa-chevron-down"></i>
-    </summary>
+  <!-- DROPDOWN MENU -->
 
-    <ul class="dropdown-menu" style="display:block;position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:none;box-shadow:none;padding-left:15px;">
+  <ul class="dropdown-menu">
 
-      <li><a href="#">NFS GEMS & JEWELLERY</a></li>
-      <li><a href="film.html">NFS FILM PRODUCTION</a></li>
-      <li><a href="decor.html">ASF DECOR RENOVATION</a></li>
-      <li><a href="permit.html">CANADA WORK PERMIT PR PORTUGAL</a></li>
-      <li><a href="stone.html">PRECIOUS STONE</a></li>
-      <li><a href="finance.html">NFC FINANCE UNSRURED LOAN 1 CR TO 50CR</a></li>
-      <li><a href="wenture.html">WE BUY DESPUTED LAND JOINT WENTURE</a></li>
+ 
+<li><a href="#">NFS GEMS & JEWELLERY</a></li>
 
-    </ul>
+<li><a href="film.html">NFS FILM PRODUCTION</a></li>
 
-  </details>
+<li><a href="decor.html">ASF DECOR RENOVATION</a></li>
+<li><a href="permit.html">CANADA WORK PERMIT PR PORTUGAL</a></li>
+<li><a href="stone.html">PRECIOUS STONE</a></li>
+<li><a href="finance.html">NFC FINANCE UNSRURED LOAN 1 CR TO 50CR</a></li>
+<li><a href="wenture.html">WE BUY DESPUTED LAND JOINT WENTURE</a></li>
+
+  </ul>
 
 </li>
 
+<style>
+ .dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:300px;
+    background:#071327;
+    list-style:none;
+    border-radius:10px;
+    overflow:hidden;
+    display:none;
+    z-index:999;
+}
+
+.dropdown-menu li a{
+    display:block;
+    padding:12px 15px;
+    color:#fff;
+    text-decoration:none;
+}
+
+.dropdown-menu li a:hover{
+    background:#0a357a;
+}
+
+/* Desktop Hover */
+
+@media (min-width:769px){
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+
+}
+
+/* Mobile Click */
+
+@media (max-width:768px){
+
+.dropdown-menu{
+    position:static;
+    width:100%;
+    margin-top:10px;
+}
+
+.dropdown.active .dropdown-menu{
+    display:block;
+}
+
+}
+</style>
+<script>
+
+const dropdown = document.querySelector('.dropdown');
+const dropdownLink = dropdown.querySelector('a');
+
+dropdownLink.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    dropdown.classList.toggle('active');
+
+});
+
+</script>
+<script>
+
+document.getElementById('companyDropdown')
+.addEventListener('click', function(){
+
+document.querySelector('.dropdown')
+.classList.toggle('active');
+
+});
+
+</script>
+<script>
+
+if(window.innerWidth <= 768){
+
+document.querySelector('.dropdown > a')
+.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    document.querySelector('.dropdown')
+    .classList.toggle('active');
+
+});
+
+}
+
+</script>
 
         <li class="dropdown">
-
- <a href="javascript:void(0)">
-  Gallery
-  <i class="fa-solid fa-chevron-down"></i>
+<a href="">Gallery
+    <i class="fa-solid fa-chevron-down"></i>
 </a>
+ 
   <!-- DROPDOWN MENU -->
 
   <ul class="dropdown-menu">
@@ -103,20 +200,16 @@
   </ul>
 
 </li>
-         <li>
-  <a href="#shop">Shop by category</a>
-</li>
-  <li>
+          <a href="#shop"> Shop by category </a>
+        </li>
+
+        <li>
           <a href="#services"> Services </a>
         </li>
-<li>
-  <a href="#team">Team</a>
-</li>
-
-      
 
      
-       
+          <a href="#team">Team </a>
+        </li>
         <li>
           <a href="#contact">Contact Us </a>
         </li>
@@ -608,6 +701,12 @@ dropdowns.forEach(dropdown => {
     </div>
     <div class="celebrity-card">
       <img src="new3.jpg" alt="">
+    </div>
+     <div class="celebrity-card">
+      <img src="new4.png" alt="">
+    </div>
+     <div class="celebrity-card">
+      <img src="new5.png" alt="">
     </div>
   </div>
 
