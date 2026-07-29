@@ -22,13 +22,7 @@ whatsappBtn.addEventListener("click", function(e){
   window.open(whatsappURL, "_blank");
 
 });
-/* ================= MOBILE DROPDOWN ================= */
 
-const dropdown = document.querySelector(".dropdown");
-
-dropdown.addEventListener("click", () => {
-  dropdown.classList.toggle("active");
-});
 /* ================= SIMPLE VIDEO SLIDER ================= */
 
 const slides = document.querySelectorAll(".video-slide");
