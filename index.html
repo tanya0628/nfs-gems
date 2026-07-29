@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Premium Animated Navbar</title>
+    <title>NFS GEMS</title>
 
     <!-- FONT AWESOME -->
     <link
@@ -24,223 +24,176 @@
     
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css">
     <style>
       
     </style>
   </head>
   <body>
+   
     <!-- NAVBAR -->
 
-    <nav class="navbar">
-      <img src="logo.png"  class="logo1" alt="">
-      <a href="#" class="logo"> NFS GEMS <br /><span>& Jewellery </span> </a>
+<nav class="navbar">
 
-      <ul class="nav-links">
+    <div class="brand">
+        <img src="logo.png" class="logo1" alt="logo">
+
+        <a href="#" class="logo">
+            NFS GEMS
+            <br>
+            <span>& Jewellery</span>
+        </a>
+    </div>
+
+
+    <ul class="nav-links">
+
         <li>
-          <a href="#">
-            <!-- <i class="fa-solid fa-house"></i> -->
-            Home
-          </a>
+            <a href="#">Home</a>
         </li>
 
         <li>
-          <a href="#about">
-            <!-- <i class="fa-solid fa-layer-group"></i> -->
-            About
-          </a>
+            <a href="#about">About</a>
         </li>
 
         <li>
-          <a href="#welcome">
-            <!-- <i class="fa-solid fa-briefcase"></i> -->
-            Welcome
-          </a>
+            <a href="#welcome">Welcome</a>
         </li>
-<!-- DROPDOWN -->
 
-<li class="dropdown">
 
- <a href="javascript:void(0)" id="companyDropdown">
-  Group Of Companies
-  <i class="fa-solid fa-chevron-down"></i>
-</a>
-
-  <!-- DROPDOWN MENU -->
-
-  <ul class="dropdown-menu">
-
- 
-<li><a href="#">NFS GEMS & JEWELLERY</a></li>
-
-<li><a href="film.html">NFS FILM PRODUCTION</a></li>
-
-<li><a href="decor.html">ASF DECOR RENOVATION</a></li>
-<li><a href="permit.html">CANADA WORK PERMIT PR PORTUGAL</a></li>
-<li><a href="stone.html">PRECIOUS STONE</a></li>
-<li><a href="finance.html">NFC FINANCE UNSRURED LOAN 1 CR TO 50CR</a></li>
-<li><a href="wenture.html">WE BUY DESPUTED LAND JOINT WENTURE</a></li>
-
-  </ul>
-
-</li>
-
-<style>
- .dropdown{
-    position:relative;
-}
-
-.dropdown-menu{
-    position:absolute;
-    top:100%;
-    left:0;
-    min-width:300px;
-    background:#071327;
-    list-style:none;
-    border-radius:10px;
-    overflow:hidden;
-    display:none;
-    z-index:999;
-}
-
-.dropdown-menu li a{
-    display:block;
-    padding:12px 15px;
-    color:#fff;
-    text-decoration:none;
-}
-
-.dropdown-menu li a:hover{
-    background:#0a357a;
-}
-
-/* Desktop Hover */
-
-@media (min-width:769px){
-
-.dropdown:hover .dropdown-menu{
-    display:block;
-}
-
-}
-
-/* Mobile Click */
-
-@media (max-width:768px){
-
-.dropdown-menu{
-    position:static;
-    width:100%;
-    margin-top:10px;
-}
-
-.dropdown.active .dropdown-menu{
-    display:block;
-}
-
-}
-</style>
-<script>
-
-const dropdown = document.querySelector('.dropdown');
-const dropdownLink = dropdown.querySelector('a');
-
-dropdownLink.addEventListener('click', function(e){
-
-    e.preventDefault();
-
-    dropdown.classList.toggle('active');
-
-});
-
-</script>
-<script>
-
-document.getElementById('companyDropdown')
-.addEventListener('click', function(){
-
-document.querySelector('.dropdown')
-.classList.toggle('active');
-
-});
-
-</script>
-<script>
-
-if(window.innerWidth <= 768){
-
-document.querySelector('.dropdown > a')
-.addEventListener('click', function(e){
-
-    e.preventDefault();
-
-    document.querySelector('.dropdown')
-    .classList.toggle('active');
-
-});
-
-}
-
-</script>
+        <!-- COMPANY DROPDOWN -->
 
         <li class="dropdown">
-<a href="">Gallery
-    <i class="fa-solid fa-chevron-down"></i>
-</a>
- 
-  <!-- DROPDOWN MENU -->
 
-  <ul class="dropdown-menu">
+            <a href="#" class="drop-btn">
+                Group Of Companies
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
 
-    <li><a href="#gallery">Photos</a></li>
 
-    <li><a href="#podcasts">Podcasts</a></li>
+            <ul class="dropdown-menu">
 
-   
+                <li>
+                    <a href="#">NFS GEMS & JEWELLERY</a>
+                </li>
 
-  </ul>
+                <li>
+                    <a href="film.html">
+                        NFS FILM PRODUCTION
+                    </a>
+                </li>
 
-</li>
-          <a href="#shop"> Shop by category </a>
+                <li>
+                    <a href="decor.html">
+                        ASF DECOR RENOVATION
+                    </a>
+                </li>
+
+                <li>
+                    <a href="permit.html">
+                        CANADA WORK PERMIT PR PORTUGAL
+                    </a>
+                </li>
+
+                <li>
+                    <a href="stone.html">
+                        PRECIOUS STONE
+                    </a>
+                </li>
+
+                <li>
+                    <a href="finance.html">
+                        NFC FINANCE UNSRURED LOAN 1 CR TO 50CR
+                    </a>
+                </li>
+
+                <li>
+                    <a href="wenture.html">
+                        WE BUY DISPUTED LAND JOINT VENTURE
+                    </a>
+                </li>
+
+            </ul>
+
         </li>
+
+
+
+        <!-- GALLERY DROPDOWN -->
+
+        <li class="dropdown">
+
+            <a href="#" class="drop-btn">
+                Gallery
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+
+            <ul class="dropdown-menu">
+
+                <li>
+                    <a href="#gallery">
+                        Photos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#podcasts">
+                        Podcasts
+                    </a>
+                </li>
+
+            </ul>
+
+        </li>
+
+
 
         <li>
-          <a href="#services"> Services </a>
+            <a href="#shop">
+                Shop by category
+            </a>
         </li>
 
-     
-          <a href="#team">Team </a>
-        </li>
+
         <li>
-          <a href="#contact">Contact Us </a>
+            <a href="#services">
+                Services
+            </a>
         </li>
 
-        <button class="nav-btn" href="#contact" >Get Started</button>
-      </ul>
 
-      <div class="menu-btn">
+        <li>
+            <a href="#team">
+                Team
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#contact">
+                Contact Us
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#contact" class="nav-btn">
+                Get Started
+            </a>
+        </li>
+
+
+    </ul>
+
+
+
+    <div class="menu-btn">
         <i class="fa-solid fa-bars"></i>
-      </div>
-    </nav>
-    
+    </div>
 
 
-    <script>
-      const menuBtn = document.querySelector(".menu-btn");
-      const navLinks = document.querySelector(".nav-links");
-      const menuIcon = menuBtn.querySelector("i");
-
-      menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-
-        if (navLinks.classList.contains("active")) {
-          menuIcon.classList.remove("fa-bars");
-          menuIcon.classList.add("fa-xmark");
-        } else {
-          menuIcon.classList.remove("fa-xmark");
-          menuIcon.classList.add("fa-bars");
-        }
-      });
-    </script>
+</nav>
 
 
 <!-- ================= HERO SECTION ================= -->
@@ -289,25 +242,7 @@ document.querySelector('.dropdown > a')
 
 </section>
 
-<script>
-const dropdowns = document.querySelectorAll(".dropdown");
 
-dropdowns.forEach(dropdown => {
-  const link = dropdown.querySelector("a");
-
-  link.addEventListener("click", function(e) {
-
-    if (window.innerWidth <= 768) {
-
-      e.preventDefault();
-
-      dropdown.classList.toggle("active");
-
-    }
-
-  });
-});
-</script>
 <!-- ================= WELCOME SECTION ================= -->
 
 <section class="welcome-section" id="welcome">
@@ -1593,6 +1528,69 @@ dropdowns.forEach(dropdown => {
 
 </div>
 </footer>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuBtn = document.querySelector(".menu-btn");
+    const navLinks = document.querySelector(".nav-links");
+    const menuIcon = menuBtn.querySelector("i");
+
+    menuBtn.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+        if(navLinks.classList.contains("active")){
+            menuIcon.classList.replace("fa-bars","fa-xmark");
+        }else{
+            menuIcon.classList.replace("fa-xmark","fa-bars");
+        }
+
+    });
+
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    dropdowns.forEach(dropdown=>{
+
+        const trigger = dropdown.querySelector("a");
+
+        trigger.addEventListener("click",(e)=>{
+
+            if(window.innerWidth <= 950){
+
+                e.preventDefault();
+
+                dropdowns.forEach(item=>{
+                    if(item!==dropdown){
+                        item.classList.remove("active");
+                    }
+                });
+
+                dropdown.classList.toggle("active");
+
+            }
+
+        });
+
+    });
+
+    document.addEventListener("click",(e)=>{
+
+        if(window.innerWidth<=950){
+
+            if(!e.target.closest(".dropdown")){
+
+                dropdowns.forEach(item=>{
+                    item.classList.remove("active");
+                });
+
+            }
+
+        }
+
+    });
+
+});
 <script src="script.js"></script>
+<script src="navbar.js"></script>
+
   </body>
 </html>
