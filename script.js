@@ -81,3 +81,15 @@ videos.forEach(video => {
     });
 
 });
+const videos = document.querySelectorAll(".category-card video");
+
+
+videos.forEach(video => {
+
+    video.play().catch(()=>{
+
+        console.log("Autoplay blocked");
+
+    });
+
+});
