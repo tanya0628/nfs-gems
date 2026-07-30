@@ -81,15 +81,11 @@ videos.forEach(video => {
     });
 
 });
-const videos = document.querySelectorAll(".category-card video");
 
+const categoryVideos = document.querySelectorAll(".category-card video");
 
-videos.forEach(video => {
+categoryVideos.forEach(video => {
 
-    video.play().catch(()=>{
-
-        console.log("Autoplay blocked");
-
-    });
+   
 
 });
