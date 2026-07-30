@@ -64,29 +64,32 @@ prev.onclick = () => {
   slides[index].classList.add("active");
 
 };
-const videos = document.querySelectorAll('video');
 
-videos.forEach(video => {
 
-    video.addEventListener('play', () => {
+window.addEventListener("load", () => {
 
-        videos.forEach(otherVideo => {
+    const categoryVideos = document.querySelectorAll(".category-card video");
 
-            if(otherVideo !== video){
-                otherVideo.pause();
-            }
+    categoryVideos.forEach(video => {
 
-        });
+        video.muted = true;
+        video.loop = true;
+        video.autoplay = true;
+        video.playsInline = true;
+
+        video.play().catch(() => {});
 
     });
 
 });
-
 const categoryVideos = document.querySelectorAll(".category-card video");
 
 categoryVideos.forEach(video => {
 
-   
+    video.play().catch(() => {
+
+        console.log("Autoplay blocked");
+
+    });
 
 });
-
