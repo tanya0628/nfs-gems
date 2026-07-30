@@ -3,377 +3,1162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ASF Decor & Renovation</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#020b1f;
-    color:#fff;
+background:#030814;
+color:#fff;
+overflow-x:hidden;
+}
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#02050c;
+}
+
+::-webkit-scrollbar-thumb{
+background:#2d7dff;
+border-radius:20px;
+}
+
+/* HEADER */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:85px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:0 7%;
+
+background:rgba(5,10,25,.65);
+backdrop-filter:blur(18px);
+
+z-index:9999;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+text-decoration:none;
+}
+
+.logo img{
+width:65px;
+}
+
+.logo-text{
+display:flex;
+flex-direction:column;
+}
+
+.logo-text h2{
+font-size:24px;
+color:#fff;
+}
+
+.logo-text span{
+font-size:12px;
+letter-spacing:3px;
+color:#2d7dff;
+}
+
+nav{
+display:flex;
+gap:35px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:500;
+position:relative;
+transition:.3s;
+}
+
+nav a:hover{
+color:#2d7dff;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0;
+height:2px;
+background:#2d7dff;
+transition:.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+.menu-btn{
+display:none;
+font-size:30px;
+cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
-    min-height:75vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:50px 20px;
-    background:linear-gradient(135deg,#02142f,#05204b,#0a357a);
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+
+padding-top:180px;
+padding-left:20px;
+padding-right:20px;
+
+text-align:center;
+
+background:
+linear-gradient(rgba(48, 47, 47, 0.555),rgba(65, 65, 66, 0.8)),
+url("decorbg.jpg");
+
+background-size:cover;
+background-position:center;
+
 }
 
 .hero-content{
-    max-width:850px;
+
+max-width:900px;
+
+animation:fadeUp 1s ease;
+
 }
 
 .hero h1{
-    font-size:60px;
-    margin-bottom:20px;
-    font-weight:800;
+
+font-size:65px;
+line-height:1.1;
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+color:#2d7dff;
 }
 
 .hero p{
-    font-size:20px;
-    color:#d5e1ff;
-    line-height:1.8;
+
+font-size:20px;
+color:#d8d8d8;
+line-height:1.9;
+margin-bottom:35px;
+
 }
 
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:14px 35px;
-    background:#2f8fff;
-    color:#fff;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:600;
-    transition:.3s;
+.hero-btn{
+
+display:inline-block;
+padding:16px 40px;
+border-radius:50px;
+
+background:#2d7dff;
+color:#fff;
+
+text-decoration:none;
+font-weight:600;
+
+transition:.35s;
+
 }
 
-.btn:hover{
-    transform:translateY(-5px);
+.hero-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 40px rgba(45,125,255,.4);
+
 }
 
-/* SECTION */
+@keyframes fadeUp{
 
-.section{
-    padding:80px 10%;
+from{
+
+opacity:0;
+transform:translateY(50px);
+
 }
 
-.section-title{
-    color:#2f8fff;
-    font-size:38px;
-    margin-bottom:25px;
+to{
+
+opacity:1;
+transform:translateY(0);
+
 }
 
-.box{
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.08);
-    padding:35px;
-    border-radius:20px;
-    line-height:1.9;
 }
 
-/* SERVICES */
+/* COMMON */
 
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+section{
+
+padding:100px 8%;
+
 }
 
-.card{
-    background:linear-gradient(145deg,#06152f,#031127);
-    padding:30px;
-    border-radius:18px;
-    text-align:center;
-    transition:.3s;
-    border:1px solid rgba(255,255,255,.08);
+.title{
+
+font-size:42px;
+text-align:center;
+margin-bottom:15px;
+
 }
 
-.card:hover{
-    transform:translateY(-8px);
+.title span{
+color:#2d7dff;
 }
 
-.card i{
-    font-size:40px;
-    color:#2f8fff;
-    margin-bottom:15px;
+.subtitle{
+
+max-width:750px;
+margin:auto;
+text-align:center;
+color:#bfbfbf;
+line-height:1.8;
+margin-bottom:60px;
+
 }
 
-.card h3{
-    font-size:18px;
+/* ABOUT */
+
+.about-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:60px;
+align-items:center;
+
 }
 
-/* FEATURES */
+.about-image{
 
-.feature-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+overflow:hidden;
+border-radius:20px;
+
 }
 
-.feature{
-    background:#071327;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
+.about-image img{
+
+width:100%;
+border-radius:20px;
+transition:.5s;
+
 }
 
-/* CONTACT */
+.about-image:hover img{
 
-.contact{
-    background:#061326;
-    text-align:center;
+transform:scale(1.08);
+
 }
 
-.contact h2{
-    font-size:40px;
-    margin-bottom:15px;
+.about-content h3{
+
+font-size:34px;
+margin-bottom:20px;
+
 }
 
-.contact p{
-    color:#d7dff3;
-    margin-bottom:10px;
+.about-content p{
+
+line-height:2;
+color:#d2d2d2;
+margin-bottom:20px;
+
 }
 
-/* FLOATING BUTTONS */
+.stats{
 
-.home-btn{
-    position:fixed;
-    right:20px;
-    bottom:90px;
-    width:55px;
-    height:55px;
-    background:#0b2447;
-    color:white;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:22px;
-    z-index:999;
-    box-shadow:0 0 20px rgba(47,143,255,.4);
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:35px;
+
 }
 
-.whatsapp-btn{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:55px;
-    height:55px;
-    background:#25D366;
-    color:white;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:28px;
-    z-index:999;
+.stat{
+
+background:#081326;
+padding:30px;
+text-align:center;
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
 }
 
-/* ANIMATION */
+.stat:hover{
 
-.hidden{
-    opacity:0;
-    transform:translateY(40px);
-    transition:.8s;
+transform:translateY(-10px);
+
 }
 
-.show{
-    opacity:1;
-    transform:translateY(0);
+.stat h2{
+
+font-size:36px;
+color:#2d7dff;
+margin-bottom:10px;
+
 }
 
-@media(max-width:768px){
-
-.hero h1{
-    font-size:38px;
-}
-
-.hero p{
-    font-size:16px;
-}
-
-.section-title{
-    font-size:30px;
-}
-
-.contact h2{
-    font-size:30px;
-}
-
+.stat p{
+margin:0;
 }
 
 </style>
+
 </head>
+
 <body>
 
-<!-- HERO -->
+<header>
+
+<a href="#" class="logo">
+
+<img src="logo.png" alt="ASF">
+
+<div class="logo-text">
+<h2>ASF DECOR</h2>
+<span>& RENOVATION</span>
+</div>
+
+</a>
+
+<nav id="navMenu">
+
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+
+</nav>
+
+<div class="menu-btn" id="menuBtn">
+<i class="fas fa-bars"></i>
+</div>
+
+</header>
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>ASF DECOR & RENOVATION</h1>
+<h1>
+Building <span>Modern</span><br>
+Spaces With Excellence
+</h1>
 
-        <p>
-            Transforming homes, offices, and commercial spaces
-            with modern interior design, renovation, remodeling,
-            and construction solutions.
-        </p>
+<p>
 
-        <a href="#contact" class="btn">Contact Us</a>
+ASF Decor & Renovation specializes in interior design,
+home renovation, office remodeling, false ceiling,
+painting, flooring and turnkey construction services.
 
-    </div>
+</p>
 
-</section>
+<a href="#about" class="hero-btn">
 
-<!-- ABOUT -->
+Explore More
 
-<section class="section hidden">
+</a>
 
-    <h2 class="section-title">About Us</h2>
-
-    <div class="box">
-
-        ASF Decor & Renovation specializes in interior design,
-        home renovation, office remodeling, false ceiling work,
-        painting services, flooring solutions, and complete
-        turnkey projects. We focus on delivering quality,
-        functionality, and beautiful spaces tailored to our
-        clients' needs.
-
-    </div>
+</div>
 
 </section>
 
-<!-- SERVICES -->
+<section id="about">
 
-<section class="section hidden">
+<h2 class="title">
+About <span>Us</span>
+</h2>
 
-    <h2 class="section-title">Our Services</h2>
+<p class="subtitle">
+
+Transforming homes and commercial spaces with
+creative design, quality workmanship and modern
+construction solutions.
+
+</p>
+
+<div class="about-grid">
+
+<div class="about-image">
+
+<img src="about.jpg" alt="About">
+
+</div>
+
+<div class="about-content">
+
+<h3>Crafting Beautiful Interiors</h3>
+
+<p>
+
+ASF Decor & Renovation provides premium interior
+design and renovation services that blend
+creativity with functionality.
+
+</p>
+
+<p>
+
+From planning to execution, our experienced team
+ensures every project is completed with quality,
+precision and customer satisfaction.
+
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<h2>500+</h2>
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<h2>300+</h2>
+<p>Clients</p>
+</div>
+
+<div class="stat">
+<h2>10+</h2>
+<p>Years</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+    <h2 class="title">
+        Our <span>Services</span>
+    </h2>
+
+    <p class="subtitle">
+        We provide complete interior and renovation solutions
+        with modern designs, premium materials, and skilled craftsmanship.
+    </p>
 
     <div class="service-grid">
 
-        <div class="card">
+        <div class="service-card">
             <i class="fas fa-house"></i>
             <h3>Home Renovation</h3>
+            <p>
+                Complete home remodeling, redesign, and renovation
+                services tailored to your lifestyle.
+            </p>
         </div>
 
-        <div class="card">
+        <div class="service-card">
             <i class="fas fa-couch"></i>
             <h3>Interior Design</h3>
+            <p>
+                Modern interior designs that combine style,
+                comfort, and functionality.
+            </p>
         </div>
 
-        <div class="card">
+        <div class="service-card">
             <i class="fas fa-paint-roller"></i>
-            <h3>Painting Services</h3>
+            <h3>Painting</h3>
+            <p>
+                Professional wall painting with premium finishes
+                for homes and commercial spaces.
+            </p>
         </div>
 
-        <div class="card">
-            <i class="fas fa-building"></i>
-            <h3>Office Renovation</h3>
-        </div>
-
-        <div class="card">
+        <div class="service-card">
             <i class="fas fa-border-all"></i>
             <h3>False Ceiling</h3>
+            <p>
+                Elegant POP and gypsum false ceiling solutions
+                with modern lighting concepts.
+            </p>
         </div>
 
-        <div class="card">
+        <div class="service-card">
             <i class="fas fa-layer-group"></i>
-            <h3>Flooring Solutions</h3>
+            <h3>Flooring</h3>
+            <p>
+                Wooden, marble, tile, and vinyl flooring
+                installations with superior quality.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-building"></i>
+            <h3>Commercial Renovation</h3>
+            <p>
+                Office, showroom, and retail space renovation
+                with premium finishing.
+            </p>
         </div>
 
     </div>
 
 </section>
 
-<!-- WHY US -->
+<!-- ================= GALLERY ================= -->
 
-<section class="section hidden">
+<section id="gallery">
 
-    <h2 class="section-title">Why Choose Us</h2>
+    <h2 class="title">
+        Our <span>Gallery</span>
+    </h2>
 
-    <div class="feature-grid">
-
-        <div class="feature">✓ Professional Team</div>
-
-        <div class="feature">✓ Premium Quality Materials</div>
-
-        <div class="feature">✓ Affordable Pricing</div>
-
-        <div class="feature">✓ Timely Project Completion</div>
-
-    </div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="section contact hidden" id="contact">
-
-    <h2>Let's Build Your Dream Space</h2>
-
-    <p>
-        Contact ASF Decor & Renovation for interior design,
-        renovation, remodeling, and construction services.
+    <p class="subtitle">
+        Explore some of our beautifully designed interiors,
+        renovation projects, and completed work.
     </p>
 
-    <br>
+    <div class="gallery-grid">
 
-    <p>📞 +91 XXXXX XXXXX</p>
-    <p>📧 info@asfdecor.com</p>
-    <p>📍 India</p>
+        <div class="gallery-card">
+            <img src="gallery1.jpg" alt="">
+            <div class="gallery-overlay">
+                <h3>Luxury Living Room</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery2.jpg" alt="">
+            <div class="gallery-overlay">
+                <h3>Modern Kitchen</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery3.jpg" alt="">
+            <div class="gallery-overlay">
+                <h3>Office Interior</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery4.jpg" alt="">
+            <div class="gallery-overlay">
+                <h3>Bedroom Design</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery5.jpg" alt="">
+            <div class="gallery-overlay">
+                <h3>False Ceiling</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery6.jpg" alt="">
+            <div class="gallery-overlay">
+                <h3>Luxury Bathroom</h3>
+            </div>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- FLOATING HOME BUTTON -->
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why">
+
+    <h2 class="title">
+        Why <span>Choose Us</span>
+    </h2>
+
+    <p class="subtitle">
+        We focus on delivering beautiful spaces with quality,
+        innovation, and complete customer satisfaction.
+    </p>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <i class="fas fa-award"></i>
+            <h3>Premium Quality</h3>
+
+            <p>
+                We use only high-quality materials and modern
+                construction techniques.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fas fa-users"></i>
+
+            <h3>Expert Team</h3>
+
+            <p>
+                Experienced designers, architects,
+                and skilled professionals.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fas fa-clock"></i>
+
+            <h3>On-Time Delivery</h3>
+
+            <p>
+                Every project is completed within
+                the committed timeline.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fas fa-handshake"></i>
+
+            <h3>Customer Satisfaction</h3>
+
+            <p>
+                We believe in transparency,
+                trust, and long-term relationships.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+/*======================
+SERVICES
+======================*/
+
+.services{
+background:#061020;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:#09172d;
+padding:40px 30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.service-card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 50px rgba(45,125,255,.18);
+}
+
+.service-card i{
+font-size:45px;
+margin-bottom:20px;
+color:#2d7dff;
+}
+
+.service-card h3{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.service-card p{
+line-height:1.8;
+color:#d2d2d2;
+}
+
+/*======================
+GALLERY
+======================*/
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.gallery-card{
+position:relative;
+height:280px;
+overflow:hidden;
+border-radius:20px;
+cursor:pointer;
+}
+
+.gallery-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.6s;
+}
+
+.gallery-card:hover img{
+transform:scale(1.15);
+}
+
+.gallery-overlay{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:25px;
+background:linear-gradient(transparent,rgba(0,0,0,.9));
+transform:translateY(100%);
+transition:.4s;
+}
+
+.gallery-card:hover .gallery-overlay{
+transform:translateY(0);
+}
+
+/*======================
+WHY
+======================*/
+
+.why{
+background:#071326;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.why-card{
+background:#0b1a33;
+padding:35px;
+border-radius:18px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.why-card:hover{
+transform:translateY(-12px);
+box-shadow:0 15px 40px rgba(45,125,255,.25);
+}
+
+.why-card i{
+font-size:48px;
+color:#2d7dff;
+margin-bottom:20px;
+}
+
+.why-card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.why-card p{
+line-height:1.8;
+color:#d6d6d6;
+}
+
+</style>
+<!-- ================= OUR PROCESS ================= -->
+
+<section class="process">
+
+    <h2 class="title">
+        Our <span>Process</span>
+    </h2>
+
+    <p class="subtitle">
+        We follow a simple and transparent workflow to deliver
+        high-quality renovation and interior solutions.
+    </p>
+
+    <div class="process-grid">
+
+        <div class="process-card">
+            <div class="number">01</div>
+            <h3>Consultation</h3>
+            <p>
+                Understanding your ideas, budget, and project
+                requirements.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">02</div>
+            <h3>Design</h3>
+            <p>
+                Creating modern layouts and customized interior
+                concepts.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">03</div>
+            <h3>Execution</h3>
+            <p>
+                Professional construction and renovation with
+                premium quality materials.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">04</div>
+            <h3>Delivery</h3>
+            <p>
+                Final inspection and timely handover with complete
+                customer satisfaction.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <h2 class="title">
+        Contact <span>Us</span>
+    </h2>
+
+    <p class="subtitle">
+        Ready to renovate your home or office?
+        Let's discuss your next project.
+    </p>
+
+    <div class="contact-box">
+
+        <p><i class="fas fa-phone"></i> +91 98116 39129</p>
+
+        <p><i class="fas fa-envelope"></i> nfsgems@gmail.com</p>
+
+        <p><i class="fas fa-location-dot"></i> India</p>
+
+        <a href="https://wa.me/919811639129" class="hero-btn">
+            Get Free Consultation
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Floating Buttons -->
 
 <a href="index.html" class="home-btn">
     <i class="fas fa-house"></i>
 </a>
 
-<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/91"
+target="_blank"
+class="whatsapp-btn">
 
-<a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="whatsapp-btn">
-    <i class="fab fa-whatsapp"></i>
+<i class="fab fa-whatsapp"></i>
+
 </a>
+
+<style>
+
+/* ================= PROCESS ================= */
+
+.process{
+background:#030814;
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.process-card{
+background:#081326;
+padding:35px 25px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+transition:.35s;
+}
+
+.process-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(45,125,255,.25);
+}
+
+.number{
+width:70px;
+height:70px;
+margin:auto;
+margin-bottom:25px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#2d7dff;
+font-size:28px;
+font-weight:700;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+background:#071326;
+text-align:center;
+}
+
+.contact-box{
+max-width:650px;
+margin:auto;
+background:#081326;
+padding:45px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-box p{
+font-size:18px;
+margin-bottom:18px;
+color:#ddd;
+}
+
+.contact-box i{
+color:#2d7dff;
+margin-right:10px;
+}
+
+/* ================= FLOATING ================= */
+
+.home-btn,
+.whatsapp-btn{
+
+position:fixed;
+right:20px;
+
+width:58px;
+height:58px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:50%;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:24px;
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+.home-btn{
+bottom:95px;
+background:#2d7dff;
+}
+
+.whatsapp-btn{
+bottom:25px;
+background:#25D366;
+}
+
+.home-btn:hover,
+.whatsapp-btn:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.menu-btn{
+display:block;
+z-index:1001;
+}
+
+nav{
+position:fixed;
+top:85px;
+left:-100%;
+width:65%;
+height:calc(100vh - 85px);
+background:#071326;
+display:flex;
+flex-direction:column;
+padding:60px 30px;
+gap:30px;
+transition:.4s;
+}
+
+nav.active{
+left:0;
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.service-grid,
+.gallery-grid,
+.why-grid,
+.process-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.title{
+font-size:34px;
+}
+
+}
+
+.hidden{
+opacity:0;
+transform:translateY(60px);
+transition:.8s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
 
 <script>
 
-const observer = new IntersectionObserver(entries => {
+/* Mobile Menu */
 
-entries.forEach(entry => {
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+menuBtn.addEventListener("click",()=>{
+
+navMenu.classList.toggle("active");
+
+const icon=menuBtn.querySelector("i");
+
+if(navMenu.classList.contains("active")){
+
+icon.classList.replace("fa-bars","fa-times");
+
+}else{
+
+icon.classList.replace("fa-times","fa-bars");
+
+}
+
+});
+
+/* Close Menu */
+
+document.querySelectorAll("#navMenu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+navMenu.classList.remove("active");
+
+menuBtn.querySelector("i").classList.replace("fa-times","fa-bars");
+
+});
+
+});
+
+/* Scroll Animation */
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
 
 if(entry.isIntersecting){
-entry.target.classList.add('show');
+
+entry.target.classList.add("show");
+
 }
 
 });
 
 });
 
-document.querySelectorAll('.hidden').forEach(el => {
-observer.observe(el);
+document.querySelectorAll("section").forEach(section=>{
+
+section.classList.add("hidden");
+
+observer.observe(section);
+
 });
 
 </script>
