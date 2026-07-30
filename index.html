@@ -1526,67 +1526,8 @@ preload="auto" >
 
 </div>
 </footer>
-document.addEventListener("DOMContentLoaded", () => {
 
-    const menuBtn = document.querySelector(".menu-btn");
-    const navLinks = document.querySelector(".nav-links");
-    const menuIcon = menuBtn.querySelector("i");
-
-    menuBtn.addEventListener("click", () => {
-
-        navLinks.classList.toggle("active");
-
-        if(navLinks.classList.contains("active")){
-            menuIcon.classList.replace("fa-bars","fa-xmark");
-        }else{
-            menuIcon.classList.replace("fa-xmark","fa-bars");
-        }
-
-    });
-
-    const dropdowns = document.querySelectorAll(".dropdown");
-
-    dropdowns.forEach(dropdown=>{
-
-        const trigger = dropdown.querySelector("a");
-
-        trigger.addEventListener("click",(e)=>{
-
-            if(window.innerWidth <= 950){
-
-                e.preventDefault();
-
-                dropdowns.forEach(item=>{
-                    if(item!==dropdown){
-                        item.classList.remove("active");
-                    }
-                });
-
-                dropdown.classList.toggle("active");
-
-            }
-
-        });
-
-    });
-
-    document.addEventListener("click",(e)=>{
-
-        if(window.innerWidth<=950){
-
-            if(!e.target.closest(".dropdown")){
-
-                dropdowns.forEach(item=>{
-                    item.classList.remove("active");
-                });
-
-            }
-
-        }
-
-    });
-
-});
+       
 <script src="script.js"></script>
 <script src="navbar.js"></script>
 
