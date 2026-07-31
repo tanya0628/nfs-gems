@@ -1,230 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Canada Work Permit | Portugal & Canada</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#020b1f;
-    color:white;
+background:#030814;
+color:#fff;
+overflow-x:hidden;
 }
 
-/* HERO */
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#02050c;
+}
+
+::-webkit-scrollbar-thumb{
+background:#2d7dff;
+border-radius:20px;
+}
+
+/*================ HEADER ================*/
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:85px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:0 7%;
+
+background:rgba(5,10,25,.65);
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:9999;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+text-decoration:none;
+
+}
+
+.logo img{
+width:65px;
+}
+
+.logo-text{
+
+display:flex;
+flex-direction:column;
+
+}
+
+.logo-text h2{
+font-size:22px;
+color:#fff;
+}
+
+.logo-text span{
+
+font-size:11px;
+letter-spacing:3px;
+color:#2d7dff;
+
+}
+
+nav{
+
+display:flex;
+gap:35px;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+font-weight:500;
+position:relative;
+transition:.3s;
+
+}
+
+nav a:hover{
+color:#2d7dff;
+}
+
+nav a::after{
+
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0;
+height:2px;
+background:#2d7dff;
+transition:.3s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+.menu-btn{
+
+display:none;
+font-size:30px;
+cursor:pointer;
+
+}
+
+/*================ HERO ================*/
 
 .hero{
-    min-height:75vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:50px 20px;
-    background:linear-gradient(135deg,#02142f,#05204b,#0a357a);
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+
+padding-top:180px;
+padding-left:20px;
+padding-right:20px;
+
+text-align:center;
+
+background:
+linear-gradient(rgba(114, 112, 112, 0.65),rgba(49, 50, 56, 0.82)),
+url("/images/canada.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
 }
 
 .hero-content{
-    max-width:900px;
+
+max-width:950px;
+
+animation:fadeUp 1s ease;
+
 }
 
 .hero h1{
-    font-size:58px;
-    font-weight:800;
-    margin-bottom:20px;
+
+font-size:68px;
+font-weight:800;
+line-height:1.1;
+
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+color:#2d7dff;
 }
 
 .hero p{
-    font-size:20px;
-    line-height:1.8;
-    color:#d8e3ff;
+
+font-size:20px;
+color:#d7d7d7;
+line-height:1.9;
+
+margin-bottom:35px;
+
 }
 
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:14px 35px;
-    background:#2f8fff;
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:600;
-    transition:.3s;
+.hero-btn{
+
+display:inline-block;
+
+padding:16px 40px;
+
+background:#2d7dff;
+
+border-radius:50px;
+
+color:#fff;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.35s;
+
 }
 
-.btn:hover{
-    transform:translateY(-5px);
+.hero-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 40px rgba(45,125,255,.35);
+
 }
 
-/* SECTION */
+@keyframes fadeUp{
 
-.section{
-    padding:80px 10%;
+from{
+
+opacity:0;
+transform:translateY(60px);
+
 }
 
-.section-title{
-    color:#2f8fff;
-    font-size:38px;
-    margin-bottom:25px;
+to{
+
+opacity:1;
+transform:translateY(0);
+
 }
 
-.box{
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
-    padding:35px;
-    line-height:1.9;
 }
 
-/* SERVICES */
+/*================ COMMON ================*/
 
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+section{
+
+padding:100px 8%;
+
 }
 
-.card{
-    background:linear-gradient(145deg,#06152f,#031127);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    transition:.3s;
+.title{
+
+font-size:42px;
+
+text-align:center;
+
+margin-bottom:15px;
+
 }
 
-.card:hover{
-    transform:translateY(-8px);
+.title span{
+
+color:#2d7dff;
+
 }
 
-.card i{
-    font-size:40px;
-    color:#2f8fff;
-    margin-bottom:15px;
+.subtitle{
+
+max-width:750px;
+
+margin:auto;
+
+text-align:center;
+
+color:#cfcfcf;
+
+line-height:1.8;
+
+margin-bottom:60px;
+
 }
 
-.card h3{
-    font-size:18px;
+/*================ ABOUT ================*/
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:60px;
+
+align-items:center;
+
 }
 
-/* FEATURES */
+.about-image{
 
-.feature-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+overflow:hidden;
+
+border-radius:20px;
+
 }
 
-.feature{
-    background:#071327;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
+.about-image img{
+
+width:100%;
+
+display:block;
+
+border-radius:20px;
+
+transition:.5s;
+
 }
 
-/* CONTACT */
+.about-image:hover img{
 
-.contact{
-    background:#061326;
-    text-align:center;
+transform:scale(1.08);
+
 }
 
-.contact h2{
-    font-size:40px;
-    margin-bottom:15px;
+.about-content h3{
+
+font-size:34px;
+
+margin-bottom:20px;
+
 }
 
-.contact p{
-    color:#d7dff3;
-    margin-bottom:10px;
+.about-content p{
+
+line-height:2;
+
+color:#d2d2d2;
+
+margin-bottom:20px;
+
 }
 
-/* FLOATING BUTTONS */
+.stats{
 
-.home-btn{
-    position:fixed;
-    bottom:90px;
-    right:20px;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:#0b2447;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:22px;
-    box-shadow:0 0 20px rgba(47,143,255,.4);
-    z-index:999;
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+margin-top:35px;
+
 }
 
-.whatsapp-btn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:#25D366;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:28px;
-    z-index:999;
+.stat{
+
+background:#081326;
+
+padding:30px;
+
+text-align:center;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
 }
 
-/* ANIMATION */
+.stat:hover{
 
-.hidden{
-    opacity:0;
-    transform:translateY(40px);
-    transition:.8s;
+transform:translateY(-10px);
+
 }
 
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
+.stat h2{
 
-@media(max-width:768px){
+font-size:36px;
 
-.hero h1{
-    font-size:38px;
-}
+color:#2d7dff;
 
-.hero p{
-    font-size:16px;
-}
-
-.section-title{
-    font-size:30px;
-}
-
-.contact h2{
-    font-size:30px;
-}
+margin-bottom:10px;
 
 }
 
 </style>
+
 </head>
+
 <body>
+
+<header>
+
+<a href="#" class="logo">
+
+<img src="logo.png" alt="Logo">
+
+<div class="logo-text">
+
+<h2>WORK PERMIT</h2>
+
+<span>PORTUGAL & CANADA</span>
+
+</div>
+
+</a>
+
+<nav id="navMenu">
+
+<a href="#">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#services">Services</a>
+
+<a href="#countries">Countries</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="menu-btn" id="menuBtn">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</header>
 
 <!-- HERO -->
 
@@ -232,15 +449,29 @@ body{
 
 <div class="hero-content">
 
-<h1>CANADA WORK PERMIT<br>PORTUGAL & CANADA</h1>
+<h1>
+
+Work In
+
+<span>Canada</span>
+
+& Portugal
+
+</h1>
 
 <p>
-Helping individuals explore international career opportunities
-through work permit guidance, visa assistance, documentation
-support, and immigration consultation for Portugal and Canada.
+
+Helping individuals build successful international careers through
+professional work permit assistance, visa consultation,
+documentation support, and immigration guidance.
+
 </p>
 
-<a href="#contact" class="btn">Apply Now</a>
+<a href="#about" class="hero-btn">
+
+Apply Now
+
+</a>
 
 </div>
 
@@ -248,126 +479,799 @@ support, and immigration consultation for Portugal and Canada.
 
 <!-- ABOUT -->
 
-<section class="section hidden">
+<section id="about">
 
-<h2 class="section-title">About Us</h2>
+<h2 class="title">
 
-<div class="box">
+About <span>Us</span>
 
-We provide professional guidance for individuals seeking work
-opportunities in Portugal and Canada. Our team assists with
-work permit applications, visa documentation, profile assessment,
-job search guidance, and immigration support to simplify the
-process of working abroad.
+</h2>
 
-</div>
+<p class="subtitle">
 
-</section>
+Your trusted partner for work permits, overseas employment,
+and immigration guidance.
 
-<!-- SERVICES -->
-
-<section class="section hidden">
-
-<h2 class="section-title">Our Services</h2>
-
-<div class="service-grid">
-
-<div class="card">
-<i class="fas fa-passport"></i>
-<h3>Work Permit Assistance</h3>
-</div>
-
-<div class="card">
-<i class="fas fa-file-alt"></i>
-<h3>Documentation Support</h3>
-</div>
-
-<div class="card">
-<i class="fas fa-briefcase"></i>
-<h3>Job Guidance</h3>
-</div>
-
-<div class="card">
-<i class="fas fa-plane-departure"></i>
-<h3>Visa Consultation</h3>
-</div>
-
-<div class="card">
-<i class="fas fa-user-check"></i>
-<h3>Profile Assessment</h3>
-</div>
-
-<div class="card">
-<i class="fas fa-globe"></i>
-<h3>Immigration Guidance</h3>
-</div>
-
-</div>
-
-</section>
-
-<!-- WHY CHOOSE US -->
-
-<section class="section hidden">
-
-<h2 class="section-title">Why Choose Us</h2>
-
-<div class="feature-grid">
-
-<div class="feature">✓ Expert Guidance</div>
-
-<div class="feature">✓ Transparent Process</div>
-
-<div class="feature">✓ Complete Documentation Support</div>
-
-<div class="feature">✓ Personalized Assistance</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="section contact hidden" id="contact">
-
-<h2>Start Your International Journey</h2>
-
-<p>
-Contact us today for professional guidance on Portugal and
-Canada work permit opportunities.
 </p>
 
-<br>
+<div class="about-grid">
 
-<p>📞 +91 9811639129</p>
+<div class="about-image">
 
+<img src="images/about.jpg" alt="About">
+
+</div>
+
+<div class="about-content">
+
+<h3>
+
+Your Global Career Starts Here
+
+</h3>
+
+<p>
+
+We provide complete assistance for Canada and Portugal work permit
+applications, helping candidates through profile assessment,
+documentation, visa consultation, and employment guidance.
+
+</p>
+
+<p>
+
+Our experienced consultants simplify every step of the immigration
+process, ensuring transparency, accuracy, and personalized support.
+
+</p>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>1000+</h2>
+
+<p>Applications</p>
+
+</div>
+
+<div class="stat">
+
+<h2>98%</h2>
+
+<p>Success Rate</p>
+
+</div>
+
+<div class="stat">
+
+<h2>8+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+    <h2 class="title">
+        Our <span>Services</span>
+    </h2>
+
+    <p class="subtitle">
+        We provide complete support for individuals planning to work
+        abroad through transparent and professional immigration services.
+    </p>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <i class="fas fa-passport"></i>
+            <h3>Work Permit</h3>
+
+            <p>
+                Complete guidance for obtaining legal work permits
+                for Canada and Portugal.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fas fa-file-signature"></i>
+
+            <h3>Documentation</h3>
+
+            <p>
+                Professional assistance with document preparation,
+                verification, and submission.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fas fa-user-check"></i>
+
+            <h3>Profile Assessment</h3>
+
+            <p>
+                Evaluate your eligibility and recommend the best
+                immigration pathway.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fas fa-briefcase"></i>
+
+            <h3>Job Assistance</h3>
+
+            <p>
+                Career guidance and overseas employment support
+                for qualified applicants.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fas fa-plane-departure"></i>
+
+            <h3>Visa Consultation</h3>
+
+            <p>
+                Step-by-step visa application guidance with
+                expert consultants.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fas fa-globe"></i>
+
+            <h3>Immigration Support</h3>
+
+            <p>
+                Complete assistance until you successfully
+                relocate abroad.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- FLOATING HOME -->
+<!-- ================= COUNTRIES ================= -->
+
+<section id="countries">
+
+    <h2 class="title">
+        Countries <span>We Serve</span>
+    </h2>
+
+    <p class="subtitle">
+        Helping candidates build successful international careers
+        in leading destinations.
+    </p>
+
+    <div class="country-grid">
+
+        <div class="country-card">
+
+            <img src="canada.jpg" alt="Canada">
+
+            <div class="country-content">
+
+                <h3>Canada</h3>
+
+                <p>
+                    Work Permit • LMIA • Skilled Jobs
+                    • PR Guidance • Immigration Support
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="country-card">
+
+            <img src="portugal.jpg" alt="Portugal">
+
+            <div class="country-content">
+
+                <h3>Portugal</h3>
+
+                <p>
+                    Work Visa • Employment Support
+                    • Documentation • Residence Guidance
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why">
+
+    <h2 class="title">
+        Why <span>Choose Us</span>
+    </h2>
+
+    <p class="subtitle">
+        We make your international journey simple,
+        transparent, and successful.
+    </p>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <i class="fas fa-award"></i>
+
+            <h3>Experienced Consultants</h3>
+
+            <p>
+                Years of experience helping candidates
+                achieve their overseas career goals.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fas fa-shield-halved"></i>
+
+            <h3>Trusted Process</h3>
+
+            <p>
+                Honest guidance with complete transparency
+                throughout the application process.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fas fa-headset"></i>
+
+            <h3>Dedicated Support</h3>
+
+            <p>
+                Personal assistance from application
+                to final visa approval.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fas fa-users"></i>
+
+            <h3>High Success Rate</h3>
+
+            <p>
+                Hundreds of successful applicants
+                placed in Canada and Portugal.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+/*================ SERVICES ================*/
+
+.services{
+background:#061020;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:#09172d;
+padding:40px 30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+text-align:center;
+}
+
+.service-card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 50px rgba(45,125,255,.2);
+}
+
+.service-card i{
+font-size:45px;
+margin-bottom:20px;
+color:#2d7dff;
+}
+
+.service-card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.service-card p{
+line-height:1.8;
+color:#d2d2d2;
+}
+
+/*================ COUNTRIES ================*/
+
+.country-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.country-card{
+background:#09172d;
+border-radius:20px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.country-card:hover{
+transform:translateY(-12px);
+}
+
+.country-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.country-content{
+padding:30px;
+}
+
+.country-content h3{
+font-size:30px;
+margin-bottom:15px;
+color:#2d7dff;
+}
+
+.country-content p{
+line-height:1.8;
+color:#d5d5d5;
+}
+
+/*================ WHY ================*/
+
+.why{
+background:#071326;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.why-card{
+background:#0b1a33;
+padding:35px;
+text-align:center;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.why-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(45,125,255,.25);
+}
+
+.why-card i{
+font-size:48px;
+color:#2d7dff;
+margin-bottom:20px;
+}
+
+.why-card h3{
+margin-bottom:15px;
+}
+
+.why-card p{
+line-height:1.8;
+color:#d6d6d6;
+}
+
+</style>
+<!-- ================= PROCESS ================= -->
+
+<section class="process">
+
+    <h2 class="title">
+        Our <span>Process</span>
+    </h2>
+
+    <p class="subtitle">
+        A simple and transparent process to help you achieve your
+        dream of working abroad.
+    </p>
+
+    <div class="process-grid">
+
+        <div class="process-card">
+            <div class="number">01</div>
+            <h3>Profile Assessment</h3>
+            <p>
+                We review your education, experience, and eligibility
+                for suitable work permit programs.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">02</div>
+            <h3>Documentation</h3>
+            <p>
+                Our team helps prepare and verify all required
+                documents for your application.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">03</div>
+            <h3>Visa Processing</h3>
+            <p>
+                Complete assistance throughout the visa application
+                and submission process.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">04</div>
+            <h3>Fly Abroad</h3>
+            <p>
+                Receive your approval and begin your international
+                career with confidence.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <h2 class="title">
+        Contact <span>Us</span>
+    </h2>
+
+    <p class="subtitle">
+        Ready to start your journey?
+        Contact our experts today.
+    </p>
+
+    <div class="contact-box">
+
+        <p><i class="fas fa-phone"></i> +91 9811639129</p>
+
+        <p><i class="fas fa-envelope"></i> 
+
+nfsgems@gmail.com</p>
+
+        <p><i class="fas fa-location-dot"></i> India</p>
+
+        <a href="https://wa.me/919811639129"
+           class="hero-btn"
+           target="_blank">
+
+           Apply Now
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Floating Buttons -->
 
 <a href="index.html" class="home-btn">
 <i class="fas fa-house"></i>
 </a>
 
-<!-- WHATSAPP -->
+<a href="https://wa.me/919811639129"
+target="_blank"
+class="whatsapp-btn">
 
-<a href="https://wa.me/919811639129" target="_blank" class="whatsapp-btn">
 <i class="fab fa-whatsapp"></i>
+
 </a>
+
+<style>
+
+/* ================= PROCESS ================= */
+
+.process{
+background:#030814;
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.process-card{
+background:#081326;
+padding:35px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+transition:.35s;
+}
+
+.process-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(45,125,255,.25);
+}
+
+.number{
+width:70px;
+height:70px;
+margin:auto;
+margin-bottom:25px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#2d7dff;
+font-size:28px;
+font-weight:700;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+background:#071326;
+text-align:center;
+}
+
+.contact-box{
+max-width:650px;
+margin:auto;
+background:#081326;
+padding:45px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-box p{
+font-size:18px;
+margin-bottom:18px;
+color:#ddd;
+}
+
+.contact-box i{
+color:#2d7dff;
+margin-right:10px;
+}
+
+/* ================= FLOATING ================= */
+
+.home-btn,
+.whatsapp-btn{
+
+position:fixed;
+right:20px;
+
+width:58px;
+height:58px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:50%;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:24px;
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+.home-btn{
+
+bottom:95px;
+background:#2d7dff;
+
+}
+
+.whatsapp-btn{
+
+bottom:25px;
+background:#25D366;
+
+}
+
+.home-btn:hover,
+.whatsapp-btn:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.menu-btn{
+display:block;
+z-index:1001;
+}
+
+nav{
+
+position:fixed;
+
+top:85px;
+left:-100%;
+
+width:70%;
+height:calc(100vh - 85px);
+
+background:#071326;
+
+display:flex;
+flex-direction:column;
+
+padding:60px 30px;
+
+gap:30px;
+
+transition:.4s;
+
+}
+
+nav.active{
+
+left:0;
+
+}
+
+.about-grid,
+.country-grid{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.service-grid,
+.why-grid,
+.process-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.title{
+font-size:34px;
+}
+
+}
+
+/* Scroll Animation */
+
+.hidden{
+opacity:0;
+transform:translateY(60px);
+transition:.8s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
 
 <script>
 
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add("show");
+/* Mobile Menu */
+
+const menuBtn=document.getElementById("menuBtn");
+const navMenu=document.getElementById("navMenu");
+
+menuBtn.addEventListener("click",()=>{
+
+navMenu.classList.toggle("active");
+
+const icon=menuBtn.querySelector("i");
+
+if(navMenu.classList.contains("active")){
+
+icon.classList.replace("fa-bars","fa-times");
+
+}else{
+
+icon.classList.replace("fa-times","fa-bars");
+
 }
-});
+
 });
 
-document.querySelectorAll(".hidden").forEach(el=>{
-observer.observe(el);
+/* Close Menu */
+
+document.querySelectorAll("#navMenu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+navMenu.classList.remove("active");
+
+menuBtn.querySelector("i").classList.replace("fa-times","fa-bars");
+
+});
+
+});
+
+/* Scroll Animation */
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach(section=>{
+
+section.classList.add("hidden");
+
+observer.observe(section);
+
 });
 
 </script>
